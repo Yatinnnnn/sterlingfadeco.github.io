@@ -69,6 +69,17 @@ h1,h2 {
     font-size:14px;
     color:#777;
 }
+    /* ---- Animations ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 700ms ease, transform 700ms ease;
+  will-change: opacity, transform;
+}
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 </style>
 </head>
 
@@ -115,6 +126,18 @@ h1,h2 {
 <div class="footer">
     © 2026 Sterling Fade Co. | Premium Mobile Grooming
 </div>
+<script>
+  // Reveal sections on scroll
+  const sections = document.querySelectorAll('section');
+  sections.forEach(sec => sec.classList.add('reveal'));
 
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(sec => io.observe(sec));
+</script>
 </body>
 </html>
