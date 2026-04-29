@@ -23,6 +23,17 @@ src="https://www.facebook.com/tr?id=2562459374188361&ev=PageView&noscript=1"
 <title>Sterling Fade Co. | Premium Mobile Grooming GTA</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+    @media (min-width: 768px) {
+  .service-card {
+    flex-direction: row;
+    align-items: center;
+  }
+}
 body {
     margin:0;
     font-family: 'Inter', sans-serif;
@@ -183,6 +194,10 @@ text-align:center;
 .service-info .btn{
 align-self:center;
 }
+}
+    .service-card img {
+  width: 100%;
+  border-radius: 12px;
 }
 </style>
 </head>
