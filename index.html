@@ -248,82 +248,112 @@ section {
 
 @media (max-width: 900px) {
   .promo-banner {
-    font-size: 13px;
-    line-height: 1.5;
-    padding: 12px 18px;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    line-height: 1.45;
+    padding: 18px 24px;
+    letter-spacing: 0.4px;
   }
 
   .navbar {
     flex-direction: column;
-    height: auto;
-    padding: 22px 18px 26px;
-    gap: 18px;
+    min-height: auto;
+    padding: 42px 22px 40px;
+    gap: 30px;
+    background: #000;
   }
 
   .logo {
-    width: 145px;
+    width: 185px;
+    max-width: 70%;
+    margin: 0 auto;
   }
 
   .nav-links {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 18px 26px;
-    text-align: center;
+    gap: 22px 26px;
+    max-width: 360px;
   }
 
   .nav-links a {
-    font-size: 12px;
-    letter-spacing: 1.6px;
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: 600;
+  }
+
+  .nav-links a:not(.nav-btn)::after {
+    content: "";
+    display: none;
   }
 
   .nav-btn {
-    grid-column: span 2;
-    padding: 15px 28px;
-    margin-top: 4px;
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    padding: 18px 22px;
+    margin-top: 8px;
+    font-size: 13px;
+    letter-spacing: 4px;
   }
 
   .hero {
-    min-height: 78vh;
-    padding: 70px 24px;
+    min-height: 92vh;
+    padding: 0 26px 70px;
     align-items: flex-end;
     background:
       linear-gradient(to bottom,
-        rgba(0,0,0,0.15) 0%,
-        rgba(0,0,0,0.45) 45%,
-        rgba(0,0,0,0.95) 100%),
+        rgba(0,0,0,0.05) 0%,
+        rgba(0,0,0,0.25) 38%,
+        rgba(0,0,0,0.70) 68%,
+        rgba(0,0,0,0.98) 100%),
       url('hf_20260505_184523_569ef1a9-68bf-49a1-a1b3-9d87640afd0d.jpeg');
     background-size: cover;
     background-position: center top;
   }
 
+  .hero-content {
+    max-width: 100%;
+  }
+
   .eyebrow {
-    font-size: 12px;
-    letter-spacing: 3px;
-    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 22px;
   }
 
   .hero h1 {
-    font-size: 46px;
-    line-height: 1.05;
-    margin-bottom: 20px;
-  }
-
-  .hero p {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 52px;
+    line-height: 1.03;
     margin-bottom: 26px;
   }
 
-  .btn-row {
-    flex-direction: column;
-    gap: 14px;
+  .hero h1::after {
+    content: "";
+    display: block;
+    width: 58px;
+    height: 2px;
+    background: #d4af37;
+    margin-top: 26px;
   }
 
-  .btn {
-    width: 100%;
-    text-align: center;
-    padding: 16px 22px;
+  .hero p {
+    font-size: 18px;
+    line-height: 1.65;
+    color: #e5e5e5;
+    margin-bottom: 0;
+  }
+
+  .hero p::after {
+    content: "Because luxury is convenience.";
+    display: block;
+    color: #d4af37;
+    margin-top: 6px;
+  }
+
+  .btn-row {
+    display: none;
   }
 
   .features,
@@ -333,6 +363,14 @@ section {
 
   section {
     padding: 70px 24px;
+  }
+
+  .section-title h2 {
+    font-size: 42px;
+  }
+
+  .footer {
+    padding: 35px 20px;
   }
 }
 </style>
