@@ -18,277 +18,357 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1304248441807436&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sterling Fade Co. | Premium Mobile Grooming GTA</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-  .promo-banner {
+:root {
+  --gold: #d4af37;
+  --muted: #b8b8b8;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.promo-banner {
   background: #000;
   color: #fff;
   text-align: center;
-  padding: 12px 16px;
-  font-size: 14px;
+  padding: 14px 16px;
+  font-size: 16px;
   font-family: 'Playfair Display', serif;
-  letter-spacing: 0.3px;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
+  letter-spacing: 0.7px;
+  border-bottom: 1px solid var(--gold);
 }
 
-.promo-banner strong {
-  color: #d4af37;
-}
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #000;
-  color: white;
-}
+.promo-banner strong { color: var(--gold); }
 
-section {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-h1, h2 {
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 1px;
-}
-
-.hero, .services, .membership {
-  text-align: center;
-}
-
-.hero {
-  padding-top: 120px;
-}
-
-.hero h1 {
-  font-size: 48px;
-}
-
-.hero p, .service-card p, .membership-card p {
-  color: #b5b5b5;
+.navbar {
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 5.5%;
+  background: #020202;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .logo {
-  width: 300px;
-  margin: 0 auto 25px;
-  display: block;
+  width: 185px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover { color: var(--gold); }
+
+.nav-btn {
+  background: linear-gradient(135deg, #f3d77a, #b88725);
+  color: #000 !important;
+  padding: 15px 24px;
+  border-radius: 2px;
+}
+
+.hero {
+  min-height: calc(100vh - 145px);
+  display: flex;
+  align-items: center;
+  padding: 0 5.5%;
+  background:
+    linear-gradient(to right,
+      rgba(0,0,0,0.98) 0%,
+      rgba(0,0,0,0.88) 38%,
+      rgba(0,0,0,0.45) 68%,
+      rgba(0,0,0,0.18) 100%),
+    url('hf_20260505_184523_569ef1a9-68bf-49a1-a1b3-9d87640afd0d.jpeg');
+  background-size: cover;
+  background-position: center right;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.hero-content {
+  max-width: 680px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 1;
+  margin: 0 0 28px;
+}
+
+.hero p {
+  color: #dedede;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 610px;
+  margin-bottom: 34px;
+}
+
+.btn-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .btn {
   display: inline-block;
-  background: #fff;
-  color: #000;
-  padding: 14px 32px;
-  margin-top: 25px;
-  border-radius: 30px;
+  padding: 17px 34px;
+  border-radius: 2px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 1px;
-  transition: all .3s ease;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-  background: #cfcfcf;
+.btn-gold {
+  background: linear-gradient(135deg, #f3d77a, #b88725);
+  color: #000;
 }
 
-.services h2,
-.membership h2 {
-  font-size: 48px;
-  margin-bottom: 50px;
+.btn-outline {
+  border: 1px solid var(--gold);
+  color: var(--gold);
 }
 
-.service-card,
-.membership-card {
-  display: flex;
-  align-items: center;
-  border: 1px solid #222;
-  border-radius: 18px;
-  background: #000;
-  padding: 28px;
-  gap: 28px;
-  margin: 30px auto;
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #030303;
 }
 
-.service-card {
-  max-width: 700px;
+.feature {
+  padding: 32px 36px;
+  border-right: 1px solid rgba(255,255,255,0.1);
 }
 
-.membership-card {
-  max-width: 820px;
+.feature h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.service-card img {
-  width: 220px;
-  max-height: 280px;
-  border-radius: 14px;
-  object-fit: contain;
+.feature p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 14px;
 }
 
-.membership-card img {
-  width: 380px;
-  max-width: 100%;
-  border-radius: 18px;
+section {
+  padding: 90px 5.5%;
 }
 
-.service-info,
-.membership-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.section-title {
+  text-align: center;
+  margin-bottom: 52px;
 }
 
-.price,
-.membership-price {
-  font-size: 26px;
-  margin: 10px 0;
-  font-weight: 600;
+.section-title span {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+  font-size: 13px;
 }
 
-.membership-price {
-  opacity: 0;
-  transition: .3s ease;
+.section-title h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 5vw, 62px);
+  margin: 12px 0 0;
 }
 
-.membership-card:hover .membership-price {
-  opacity: 1;
+.why {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.why-card {
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 32px;
+  background: #050505;
+}
+
+.why-card h3 {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.why-card p {
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 .footer {
   text-align: center;
-  padding: 40px;
-  font-size: 14px;
+  padding: 45px 20px;
   color: #777;
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 700ms ease, transform 700ms ease;
-}
-
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 38px;
-  }
-
-  .services h2,
-  .membership h2 {
-    font-size: 42px;
-  }
-
-  .service-card,
-  .membership-card {
+@media (max-width: 900px) {
+  .navbar {
     flex-direction: column;
-    text-align: center;
+    height: auto;
+    gap: 20px;
   }
 
-  .service-card img,
-  .membership-card img {
-    width: 100%;
-    max-width: 420px;
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
   }
 
-  .membership-price {
-    opacity: 1;
+  .logo {
+    width: 165px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 90px 24px;
+    background-position: center right;
+  }
+
+  .features,
+  .why {
+    grid-template-columns: 1fr;
   }
 }
 </style>
 </head>
 
 <body>
-  <div class="promo-banner">
+
+<div class="promo-banner">
   Use code <strong>STERLING30</strong> at checkout for <strong>30% OFF</strong> your first Sterling Fade Co. experience.
 </div>
 
+<header class="navbar">
+  <img src="0D5003D2-5160-411C-B00F-C118A4499886.jpeg" class="logo" alt="Sterling Fade Co Logo">
+
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="services.html#membership">Membership</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+    <a class="nav-btn" href="https://www.fresha.com/book-now/sterling-fade-co-ps8hgwns/services?lid=2894228&eid=5114480&share=true&pId=2798357">Book Appointment</a>
+  </nav>
+</header>
+
 <section class="hero">
-    <img src="0D5003D2-5160-411C-B00F-C118A4499886.jpeg" class="logo" alt="Sterling Fade Co Logo" margin-bottom:20px;">
-    <h1>Sterling Fade Co.</h1>
-    <p>Premium Mobile Grooming across Greater Toronto Area (GTA).<br>
-    Clean fades. Sharp beard detailing. Delivered to your door.</p>
-    <a href="https://www.fresha.com/book-now/sterling-fade-co-ps8hgwns/services?lid=2894228&eid=5114480&share=true&pId=2798357" class="btn">Book Now</a>
-</section>
+  <div class="hero-content">
+    <div class="eyebrow">Premium Mobile Grooming</div>
+    <h1>We Bring The Experience To You.</h1>
+    <p>Professional haircuts, beard trims, and premium grooming delivered to your location. Because luxury is convenience.</p>
 
-<section class="services">
-    <h2>Services</h2>
-    <div class="service-card">
-<img src="9B8ADFD2-CDBE-472C-A445-5350463681DA.jpeg">
-<div class="service-info">
-<h3>Haircut</h3>
-<p>Precision fade or classic cut.<br>45 Minutes</p>
-<div class="price">$39.99</div>
-<a href="https://www.fresha.com/book-now/sterling-fade-co-ps8hgwns/services?lid=2894228&eid=5114480&share=true&pId=2798357" class="btn">Book Now</a>
-</div>
-</div>
-
-<div class="service-card">
-<img src="67FDDFD1-9D9A-43FE-81B9-7D50D2E41AA7.jpeg">
-<div class="service-info">
-<h3>Haircut + Beard</h3>
-<p>Clean fade with sharp beard detailing.<br>60 Minutes</p>
-<div class="price">$54.99</div>
-<a href="https://www.fresha.com/book-now/sterling-fade-co-ps8hgwns/services?lid=2894228&eid=5114480&share=true&pId=2798357" class="btn">Book Now</a>
-</div>
-</div>
- 
-</section>
-
-<section class="membership">
-  <h2>Membership</h2>
-
-  <div class="membership-card">
-    <img src="membership.png">
-
-    <div class="membership-info">
-      <h3>Premium Membership</h3>
-      <p>3 Haircuts • 3 Beard Trims • 3 Lineups • 1 Head Massage<br>Valid for 1 Month</p>
-
-      <div class="membership-price">$109.99</div>
-
-      <a href="https://www.fresha.com/book-now/sterling-fade-co-ps8hgwns/paid-plans?share=true&pId=2798357" class="btn">Enroll Now</a>
+    <div class="btn-row">
+      <a class="btn btn-gold" href="https://www.fresha.com/book-now/sterling-fade-co-ps8hgwns/services?lid=2894228&eid=5114480&share=true&pId=2798357">Book Appointment</a>
+      <a class="btn btn-outline" href="services.html">View Services</a>
     </div>
   </div>
 </section>
 
-<section>
-    <h2 style="text-align:center;">Why Choose Us</h2>
-    <p style="text-align:center; color:#b5b5b5; max-width:700px; margin:auto;">
-    Skip the wait. No traffic. No crowded shops.
-    Sterling Fade Co. delivers professional grooming directly to your home with sanitized tools and punctual service.
-    </p>
+<div class="features">
+  <div class="feature">
+    <h3>We Come To You</h3>
+    <p>Home, office, hotel — your location, your time.</p>
+  </div>
+  <div class="feature">
+    <h3>Premium Experience</h3>
+    <p>Top-tier grooming with attention to detail.</p>
+  </div>
+  <div class="feature">
+    <h3>Save Time</h3>
+    <p>No waiting rooms. No driving. No hassle.</p>
+  </div>
+  <div class="feature">
+    <h3>Professional Finish</h3>
+    <p>Clean tools. Sharp results. Consistent service.</p>
+  </div>
+</div>
+
+<section id="why">
+  <div class="section-title">
+    <span>Why Choose Us</span>
+    <h2>Luxury Meets Convenience</h2>
+  </div>
+
+  <div class="why">
+    <div class="why-card">
+      <h3>No Waiting</h3>
+      <p>Skip crowded barbershops and get groomed on your schedule.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>At Your Doorstep</h3>
+      <p>We bring professional grooming directly to your home, office, or hotel.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>Premium Detail</h3>
+      <p>Every cut is finished with precision, care, and a polished experience.</p>
+    </div>
+  </div>
 </section>
 
-<section>
-    <h2 style="text-align:center;">Service Areas</h2>
-    <p style="text-align:center; color:#b5b5b5;">
-    Oakville • Mississauga • Surrounding GTA
-    </p>
+<section id="contact">
+  <div class="section-title">
+    <span>Service Area</span>
+    <h2>Serving The GTA</h2>
+  </div>
+
+  <p style="text-align:center; color:#b8b8b8; max-width:720px; margin:auto; line-height:1.8;">
+    Oakville • Mississauga • Milton • Burlington • Greater Toronto Area
+    <br><br>
+    Instagram/Facebook: <strong style="color:#d4af37;">sterlingfadeco</strong><br>
+    Email: <strong style="color:#d4af37;">sterlingfadeco@gmail.com</strong>
+  </p>
 </section>
 
 <div class="footer">
-    © 2026 Sterling Fade Co. | Premium Mobile Grooming
+  © 2026 Sterling Fade Co. | Premium Mobile Grooming
 </div>
-<script>
-  // Reveal sections on scroll
-  const sections = document.querySelectorAll('section');
-  sections.forEach(sec => sec.classList.add('reveal'));
 
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('show');
-    });
-  }, { threshold: 0.15 });
-
-  sections.forEach(sec => io.observe(sec));
-</script>
 </body>
 </html>
