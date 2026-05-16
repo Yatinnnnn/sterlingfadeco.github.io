@@ -247,31 +247,92 @@ section {
 }
 
 @media (max-width: 900px) {
+  .promo-banner {
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 12px 18px;
+  }
+
   .navbar {
     flex-direction: column;
     height: auto;
-    gap: 20px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
+    padding: 22px 18px 26px;
     gap: 18px;
   }
 
   .logo {
-    width: 165px;
+    width: 145px;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 18px 26px;
+    text-align: center;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    letter-spacing: 1.6px;
+  }
+
+  .nav-btn {
+    grid-column: span 2;
+    padding: 15px 28px;
+    margin-top: 4px;
   }
 
   .hero {
-    min-height: auto;
-    padding: 90px 24px;
-    background-position: center right;
+    min-height: 78vh;
+    padding: 70px 24px;
+    align-items: flex-end;
+    background:
+      linear-gradient(to bottom,
+        rgba(0,0,0,0.15) 0%,
+        rgba(0,0,0,0.45) 45%,
+        rgba(0,0,0,0.95) 100%),
+      url('hf_20260505_184523_569ef1a9-68bf-49a1-a1b3-9d87640afd0d.jpeg');
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+    line-height: 1.05;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 26px;
+  }
+
+  .btn-row {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 16px 22px;
   }
 
   .features,
   .why {
     grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 70px 24px;
   }
 }
 </style>
