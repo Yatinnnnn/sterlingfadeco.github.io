@@ -65,9 +65,19 @@ body {
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
+.logo-wrap {
+  overflow: hidden;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .logo {
-  width: 185px;
+  width: 260px;
   height: auto;
+  object-fit: contain;
+  transform: scale(1.8);
 }
 
 .nav-links {
@@ -401,7 +411,9 @@ section {
 </div>
 
 <header class="navbar">
-  <img src="0D5003D2-5160-411C-B00F-C118A4499886.jpeg" class="logo" alt="Sterling Fade Co Logo">
+    <div class="logo-wrap">
+        <img src="0D5003D2-5160-411C-B00F-C118A4499886.jpeg" class="logo">
+    </div>
 
   <nav class="nav-links">
     <a href="index.html">Home</a>
