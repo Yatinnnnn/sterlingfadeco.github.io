@@ -269,16 +269,22 @@ section {
   }
 
   .logo-wrap {
-    overflow: hidden;
-    height: 120px;
+    overflow: visible;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 0;
 }
 
 .logo {
-    width: 260px;
+    width: 220px;
+    max-width: 82%;
     height: auto;
+    display: block;
     object-fit: contain;
-    transform: scale(1.8);
-    margin: 0;
+    transform: none;
 }
 
   .nav-links {
