@@ -417,6 +417,30 @@ section {
     padding: 35px 20px;
   }
 }
+  .fade-section {
+  opacity: 0;
+  transform: translateY(45px);
+  transition: opacity 1.1s ease, transform 1.1s ease;
+}
+
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section,
+.features,
+.footer {
+  position: relative;
+}
+
+section::before,
+.features::before {
+  content: "";
+  display: block;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), #000);
+}
 </style>
 </head>
 
@@ -514,6 +538,25 @@ section {
 <div class="footer">
   © 2026 Sterling Fade Co. | Premium Mobile Grooming
 </div>
+  <script>
+  const fadeItems = document.querySelectorAll("section, .features, .footer");
+
+  fadeItems.forEach(item => {
+    item.classList.add("fade-section");
+  });
+
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  fadeItems.forEach(item => fadeObserver.observe(item));
+</script>
 
 </body>
 </html>
