@@ -306,18 +306,24 @@ section {
   }
 
   .hero {
-    min-height: 92vh;
-    padding: 70px 26px 60px;
-    align-items: flex-start;
+    position: relative;
+    min-height: 88vh;
+    padding: 90px 24px 70px;
+    display: flex;
+    align-items: center;
     background:
-      linear-gradient(to right,
-        rgba(0,0,0,0.97) 0%,
-        rgba(0,0,0,0.88) 52%,
-        rgba(0,0,0,0.45) 100%),
-      url('6505439F-13D2-4E94-852D-799E1BA34B6F.png');
+    linear-gradient(
+        to right,
+        rgba(0,0,0,0.92) 0%,
+        rgba(0,0,0,0.72) 42%,
+        rgba(0,0,0,0.45) 100%
+    ),
+    url('mobile-hero.jpeg');
+
     background-size: cover;
-    background-position: 78% center;
-  }
+    background-position: center top;
+    background-repeat: no-repeat;
+}
 
   .hero-content {
     max-width: 82%;
