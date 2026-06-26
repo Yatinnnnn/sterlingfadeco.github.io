@@ -247,31 +247,37 @@ body {
   }
 
   .navbar {
-    flex-direction: column;
-    gap: 24px;
-    padding: 26px 24px 24px;
-  }
+  flex-direction: column;
+  height: auto;
+  gap: 20px;
+  padding: 24px 20px;
+}
 
-  .logo {
-    width: 220px;
-    max-width: 82%;
-  }
+.logo {
+  width: 165px;
+}
 
-  .nav-links {
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 18px;
-  }
+.nav-links {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px 28px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 24px;
+}
 
-  .nav-links a {
-    font-size: 10px;
-    letter-spacing: 2px;
-  }
+.nav-links a {
+  font-size: 13px;
+  letter-spacing: 2.4px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
 
-  .nav-btn {
-    display: none;
-  }
+.nav-btn {
+  display: none;
+}
 
   .hero {
     min-height: 70vh;
