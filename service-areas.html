@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1304248441807436');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Areas | Sterling Fade Co.</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --gold: #d4af37;
+  --muted: #b8b8b8;
+}
+
+.promo-banner {
+  text-align: center;
+  padding: 14px 16px;
+  font-family: 'Playfair Display', serif;
+  border-bottom: 1px solid var(--gold);
+}
+
+.promo-banner strong {
+  color: var(--gold);
+}
+
+.navbar {
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 5.5%;
+  background: #020202;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+  width: 185px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.header {
+  padding: 90px 5.5% 40px;
+  text-align: center;
+}
+
+.header span {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(44px, 6vw, 72px);
+  margin: 14px 0;
+}
+
+.header p {
+  color: var(--muted);
+  max-width: 720px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+.map-section {
+  padding: 40px 5.5% 90px;
+}
+
+.map-card {
+  max-width: 950px;
+  margin: 0 auto 90px;
+  opacity: 0;
+  transform: translateY(70px) scale(0.96);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.map-card.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.map-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 5vw, 54px);
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.map-card img {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid rgba(212,175,55,0.35);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.65);
+}
+
+.footer {
+  text-align: center;
+  padding: 45px 20px;
+  color: #777;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .logo {
+    width: 220px;
+    max-width: 82%;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .header {
+    padding: 70px 24px 30px;
+  }
+
+  .map-section {
+    padding: 35px 24px 70px;
+  }
+
+  .map-card {
+    margin-bottom: 70px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="promo-banner">
+  Use code <strong>STERLING30</strong> at checkout for <strong>30% OFF</strong> your first Sterling Fade Co. experience.
+</div>
+
+<header class="navbar">
+  <img src="0D5003D2-5160-411C-B00F-C118A4499886.jpeg" class="logo" alt="Sterling Fade Co Logo">
+
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="services.html#membership">Membership</a>
+    <a href="service-areas.html">Service Areas</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="header">
+  <span>Where We Serve</span>
+  <h1>Service Areas</h1>
+  <p>Sterling Fade Co. provides premium mobile grooming across Oakville, Mississauga, Milton, Burlington, and Toronto.</p>
+</section>
+
+<section class="map-section">
+  <div class="map-card">
+    <h2>Oakville</h2>
+    <img src="oakville-map.png" alt="Oakville Service Area">
+  </div>
+
+  <div class="map-card">
+    <h2>Mississauga</h2>
+    <img src="mississauga-map.png" alt="Mississauga Service Area">
+  </div>
+
+  <div class="map-card">
+    <h2>Milton</h2>
+    <img src="milton-map.png" alt="Milton Service Area">
+  </div>
+
+  <div class="map-card">
+    <h2>Burlington</h2>
+    <img src="burlington-map.png" alt="Burlington Service Area">
+  </div>
+
+  <div class="map-card">
+    <h2>Toronto</h2>
+    <img src="toronto-map.png" alt="Toronto Service Area">
+  </div>
+</section>
+
+<div class="footer">
+  © 2026 Sterling Fade Co. | Premium Mobile Grooming
+</div>
+
+<script>
+const cards = document.querySelectorAll('.map-card');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show');
+    }
+  });
+}, {
+  threshold: 0.18
+});
+
+cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
