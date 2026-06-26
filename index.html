@@ -288,18 +288,22 @@ section {
 }
 
   .nav-links {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 0;
-    border-top: 1px solid rgba(255,255,255,0.12);
-    padding-top: 22px;
-  }
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px 28px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 24px;
+}
 
-  .nav-links a {
-    font-size: 10px;
-    letter-spacing: 2.4px;
-  }
+.nav-links a {
+  font-size: 13px;
+  letter-spacing: 2.4px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
 
   .nav-btn {
     display: none;
