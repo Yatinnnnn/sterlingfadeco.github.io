@@ -166,3 +166,139 @@
     );
   }
 }
+/* Paste this entire block at the very bottom of the existing styles.css file. */
+
+/* ===== Site-wide silk background system ===== */
+body {
+  background-color: #000;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
+    url("silk-background-1.webp");
+  background-size: 100% 100%, cover;
+  background-position: center, center top;
+  background-attachment: scroll, fixed;
+}
+
+.nav {
+  background-color: rgba(2, 2, 2, 0.78);
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.7)),
+    url("silk-background-3.webp");
+  background-size: 100% 100%, cover;
+  background-position: center, center 46%;
+}
+
+.page-hero {
+  background-color: #020202;
+  background-image:
+    radial-gradient(circle at 50% 10%, rgba(212, 175, 55, 0.16), transparent 38%),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.18) 68%, #000 100%),
+    url("silk-background-3.webp");
+  background-size: 100% 100%, 100% 100%, cover;
+  background-position: center, center, center 44%;
+  background-repeat: no-repeat;
+}
+
+.features {
+  background-color: #020202;
+  background-image:
+    linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.26) 18%, rgba(0, 0, 0, 0.3) 82%, #000 100%),
+    url("silk-background-2.webp");
+  background-size: 100% 100%, cover;
+  background-position: center, center 68%;
+  background-repeat: no-repeat;
+}
+
+.feature {
+  background-color: rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+/* Existing photographic hero and custom Why Us background stay unchanged. */
+main > section:not(.hero):not(#why) {
+  background-color: #020202;
+  background-image:
+    linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.34) 15%, rgba(0, 0, 0, 0.26) 84%, #000 100%),
+    url("silk-background-1.webp");
+  background-size: 100% 100%, cover;
+  background-position: center, center 50%;
+  background-repeat: no-repeat;
+}
+
+main > section:not(.hero):not(#why):nth-of-type(even) {
+  background-image:
+    linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.32) 15%, rgba(0, 0, 0, 0.25) 84%, #000 100%),
+    url("silk-background-2.webp");
+  background-position: center, 72% center;
+}
+
+main > section:not(.hero):not(#why):nth-of-type(3n) {
+  background-image:
+    linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.3) 15%, rgba(0, 0, 0, 0.24) 84%, #000 100%),
+    url("silk-background-4.webp");
+  background-position: center, 42% center;
+}
+
+main > section:not(#why) .card,
+.review-inner,
+.membership-card {
+  background:
+    linear-gradient(155deg, rgba(10, 10, 10, 0.8), rgba(1, 1, 1, 0.7));
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+}
+
+.faq-item {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.footer {
+  background-color: #020202;
+  background-image:
+    linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.34) 34%, rgba(0, 0, 0, 0.48) 100%),
+    url("silk-background-4.webp");
+  background-size: 100% 100%, cover;
+  background-position: center, center 72%;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 980px) {
+  .nav-links {
+    background-color: rgba(0, 0, 0, 0.9);
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.62)),
+      url("silk-background-2.webp");
+    background-size: 100% 100%, cover;
+    background-position: center;
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .page-hero,
+  .features,
+  main > section:not(.hero):not(#why),
+  main > section:not(.hero):not(#why):nth-of-type(even),
+  main > section:not(.hero):not(#why):nth-of-type(3n),
+  .footer {
+    background-size: 100% 100%, cover;
+    background-position: center, center;
+  }
+
+  .feature {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    background-attachment: scroll;
+  }
+}
