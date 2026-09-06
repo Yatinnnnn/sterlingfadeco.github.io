@@ -123,3 +123,46 @@
     transform: none;
   }
 }
+/* Blend the background image edge into black */
+#why::before {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 32%,
+    rgba(0, 0, 0, 0.18) 37%,
+    rgba(0, 0, 0, 0.58) 43%,
+    #000 51%,
+    #000 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 32%,
+    rgba(0, 0, 0, 0.18) 37%,
+    rgba(0, 0, 0, 0.58) 43%,
+    #000 51%,
+    #000 100%
+  );
+}
+
+/* Gentler edge blend on mobile */
+@media (max-width: 650px) {
+  #why::before {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.5) 8%,
+      #000 20%,
+      #000 100%
+    );
+
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.5) 8%,
+      #000 20%,
+      #000 100%
+    );
+  }
+}
